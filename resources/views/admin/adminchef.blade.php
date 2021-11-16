@@ -1,8 +1,3 @@
-<x-app-layout>
-
-</x-app-layout>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +10,7 @@
    <div class="container-scroller">
      
   	@include("admin.navbar")
+  	@include("nav-menu-new")
 
 
   	<form action="{{url('/uploadchef')}}" method="Post" enctype="multipart/form-data">

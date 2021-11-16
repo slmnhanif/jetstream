@@ -1,29 +1,26 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
 
-<x-app-layout>
-
-</x-app-layout>
+ --}}
 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-   
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+
    @include("admin.admincss")
    
-  </head>
-  <body>
-    
-    <div class="container-scroller">
-     
+ </head>
+ <body>
+
+  <div class="container-scroller">
   	@include("admin.navbar")
 
-
+    @include("nav-menu-new")
 
   	<div  style="position: relative; top: 60px; right: -150px " >
   		
@@ -63,12 +60,12 @@
 
   	</div>
 
-   </div>
+  </div>
 
-   @include("admin.adminscript")
+  @include("admin.adminscript")
 
 
-  </body>
+</body>
 </html>
 
 

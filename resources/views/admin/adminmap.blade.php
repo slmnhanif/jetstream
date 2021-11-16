@@ -1,8 +1,3 @@
-<x-app-layout>
-
-</x-app-layout>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +10,8 @@
    <div class="container-scroller">
      
   	@include("admin.navbar")
+    @include("nav-menu-new")
+    
       <div class="content">
         <form action="{{ url('/store') }}" method="post"  enctype="multipart/form-data">
             @csrf
