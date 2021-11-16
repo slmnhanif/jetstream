@@ -1,7 +1,3 @@
-<x-app-layout>
-
-</x-app-layout>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +11,7 @@
    <div class="container-scroller">
      
   	@include("admin.navbar")
+    
 
   
   </div>

@@ -1,7 +1,7 @@
-<x-app-layout>
+{{-- <x-app-layout>
 
 </x-app-layout>
-
+ --}}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,7 @@
      
 
   	@include("admin.navbar")
+    @include("nav-menu-new")
 
    
 <div class="container">

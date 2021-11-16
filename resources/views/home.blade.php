@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.css">
-<script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.css">
+    <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
     <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
 
     <title>Pantai Panjang</title>
@@ -27,12 +27,15 @@
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
-    </head>
-    
-    <body>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="{{ mix('js/app.js') }}" defer></script>
+
+</head>
+
+<body>
 
 
-    
+
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -61,7 +64,7 @@
 
 
                             <a class="menu-trigger">
-                                
+
                                 <span>Menu</span>
 
                             </a>
@@ -75,7 +78,7 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
-                           	
+
                         <!-- 
                             <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
@@ -86,9 +89,9 @@
                                 </ul>
                             </li>
                         -->
-                            <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                           
-                           <li class="scroll-to-section"><a href="#chefs">Penyewaan</a></li> 
+                        <li class="scroll-to-section"><a href="#menu">Menu</a></li>
+
+                        <li class="scroll-to-section"><a href="#chefs">Penyewaan</a></li> 
                             {{-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
@@ -102,87 +105,89 @@
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
 
 
-            
-
-                        
-
-
-
-                    <li class="scroll-to-section"  style="background-color: red;">
-                        
-
-                    @auth
-
-                <a href="{{url('/showcart',Auth::user()->id)}}">
-                   
-                    Cart{{$count}}
-
-                </a>
-
-                    @endauth
-
-
-                    @guest
-
-                    Cart[0]
-
-                    @endguest
-
-                </a></li> 
 
 
 
 
 
 
-            <li>
-                                
+                            <li class="scroll-to-section"  style="background-color: red;">
+
+
+                                @auth
+
+                                <a href="{{url('/showcart',Auth::user()->id)}}">
+
+                                    Cart{{$count}}
+
+                                </a>
+
+                                @endauth
+
+
+                                @guest
+
+                                Cart[0]
+
+                                @endguest
+
+                            </a></li> 
+
+
+
+
+
+
+                            <li>
+
                                 @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                      <li>
-                          
-                        <x-app-layout>
+                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                    @auth
+                                    <li>
 
-                        </x-app-layout>
+                        {{-- <x-app-layout>
 
-                      </li>
+                        </x-app-layout> --}}
+
+                        @include("nav-menu-home")
+
+                    </li>
                     @else
-                        <li><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a></li>
+                    <li><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a></li>
 
-                        @if (Route::has('register'))
-                          <li>  <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a></li>
-                        @endif
+                    @if (Route::has('register'))
+                    <li>  <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a></li>
+                    @endif
                     @endauth
                 </div>
-            @endif
+                @endif
 
 
-                            </li>
+            </li>
 
-                        </ul>        
-
-
-                        
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+        </ul>        
 
 
 
-    <!-- ***** Main Banner Area Start ***** -->
-    <div id="top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="left-content">
-                        <div class="inner-content">
-                            <h4>Pantai Panjang</h4>
-                            <h6>THE BEST HOLIDAY</h6>
+        <!-- ***** Menu End ***** -->
+    </nav>
+</div>
+</div>
+</div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+
+
+<!-- ***** Main Banner Area Start ***** -->
+<div id="top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="left-content">
+                    <div class="inner-content">
+                        <h4>Pantai Panjang</h4>
+                        <h6>THE BEST HOLIDAY</h6>
                             {{-- <div class="main-white-button scroll-to-section">
                                 <a href="#reservation">Make A Reservation</a>
                             </div> --}}
@@ -197,105 +202,105 @@
                             <div class="img-fill">
                                 <img src="assets/images/bg01.jpg" alt="">
                             </div>
-                          </div>
-                          <!-- // Item -->
-                          <!-- Item -->
-                          <div class="item">
+                        </div>
+                        <!-- // Item -->
+                        <!-- Item -->
+                        <div class="item">
                             <div class="img-fill">
                                 <img src="assets/images/bg02.jpg" alt="">
                             </div>
-                          </div>
-                          <!-- // Item -->
-                          <!-- Item -->
-                          <div class="item">
-                              
+                        </div>
+                        <!-- // Item -->
+                        <!-- Item -->
+                        <div class="item">
+
                             <div class="img-fill">
                                 <img src="assets/images/bg03.jpg" alt="">
                             </div>
-                          </div>
-                          <!-- // Item -->
                         </div>
+                        <!-- // Item -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ***** Main Banner Area End ***** -->
+</div>
+<!-- ***** Main Banner Area End ***** -->
 
-    <!-- ***** About Area Starts ***** -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>About </h6>
-                            <h2>Pantai Panjang</h2>
-                        </div>
-                        <p>Pantai Panjang adalah salah satu destinasi wisata yang cukup populer di Bengkulu. Pantai ini menyajikan pemandangan pasir putih yang disertai dengan dentuman ombak yang memukau. Seperti nama yang tersemat pada pantai tersebut, tempat wisata Bengkulu ini memang punya garis pantai yang panjang, yakni mencapai lebih dari 7 kilometer. <br><br>
-                            Di sekitar pantai, Anda bisa menemukan berbagai fasilitas dan sarana akomodasi yang cukup lengkap, seperti area parker yang luas, restoran, kolam renang, hotel, cottage, kios-kios, minimarker, kios cinderamata, dll sebagainya..</p><br>
-                        <div class="row">
-
-                            <div class="col-12">
-                                <img src="assets/images/pantai-panjang2.jpg" alt="">
-                            </div>
-                        </div>
+<!-- ***** About Area Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>About </h6>
+                        <h2>Pantai Panjang</h2>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="right-content">
-                        <div class="thumb">
-                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                            <img src="assets/images/vidio4.jpg" alt="">
+                    <p>Pantai Panjang adalah salah satu destinasi wisata yang cukup populer di Bengkulu. Pantai ini menyajikan pemandangan pasir putih yang disertai dengan dentuman ombak yang memukau. Seperti nama yang tersemat pada pantai tersebut, tempat wisata Bengkulu ini memang punya garis pantai yang panjang, yakni mencapai lebih dari 7 kilometer. <br><br>
+                    Di sekitar pantai, Anda bisa menemukan berbagai fasilitas dan sarana akomodasi yang cukup lengkap, seperti area parker yang luas, restoran, kolam renang, hotel, cottage, kios-kios, minimarker, kios cinderamata, dll sebagainya..</p><br>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <img src="assets/images/pantai-panjang2.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="right-content">
+                    <div class="thumb">
+                        <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                        <img src="assets/images/vidio4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- ***** About Area Ends ***** -->
+    </div>
+</section>
+<!-- ***** About Area Ends ***** -->
 
 
 
 
-    @include("food")
+@include("food")
 
 
-    @include("foodchef")
+@include("foodchef")
 
-    @include("gmap")
+@include("gmap")
 
-   @include("reservation")
+@include("reservation")
 
-    <!-- ***** Menu Area Starts ***** -->
-    <center>
+<!-- ***** Menu Area Starts ***** -->
+<center>
     @include("menustarts")
-    </center>
-    <!-- ***** Chefs Area Ends ***** --> 
-    
-    <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-xs-12">
-                    <div class="right-text-content">
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                    </div>
+</center>
+<!-- ***** Chefs Area Ends ***** --> 
+
+<!-- ***** Footer Start ***** -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <div class="right-text-content">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-4">
-                    <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
-                    </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
                 </div>
-                <div class="col-lg-4 col-xs-12">
-                    <div class="left-text-content">
-                        <p>© Copyright Klassy Cafe Co.
-                        
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="left-text-content">
+                    <p>© Copyright Klassy Cafe Co.
+
                         <br>Design: TemplateMo</p>
                     </div>
                 </div>
@@ -306,7 +311,7 @@
 
 
 
-  
+
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -333,13 +338,13 @@
         $(function() {
             var selectedClass = "";
             $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
                 $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
+                setTimeout(function() {
+                  $("."+selectedClass).fadeIn();
+                  $("#portfolio").fadeTo(50, 1);
+              }, 500);
                 
             });
         });
@@ -348,8 +353,8 @@
 
 
 
-   
 
 
-  </body>
+
+</body>
 </html>

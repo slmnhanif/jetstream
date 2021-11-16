@@ -1,6 +1,6 @@
-<x-app-layout>
+{{-- <x-app-layout>
 
-</x-app-layout>
+</x-app-layout> --}}
 
 
 <!DOCTYPE html>
@@ -15,6 +15,7 @@
    <div class="container-scroller">
      
   	@include("admin.navbar")
+    @include("nav-menu-new")
 
 
 

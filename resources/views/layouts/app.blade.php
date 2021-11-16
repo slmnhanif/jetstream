@@ -13,8 +13,6 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-
         @livewireStyles
 
         <!-- Scripts -->
@@ -23,8 +21,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="">
-            
+        <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -45,9 +42,5 @@
         @stack('modals')
 
         @livewireScripts
-
-        <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-
-        @stack('script')
     </body>
 </html>
